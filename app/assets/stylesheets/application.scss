@@ -14,6 +14,11 @@ body {
 
 a {
   text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-decoration: overline;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 header {
@@ -25,9 +30,12 @@ header {
 
 .link-header a {
   color: rgb(255, 255, 255);
+  text-decoration: none;
+
 }
 .link-header a:hover {
-  color: rgba(255, 255, 255, 0.571);
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.849);
 }
 
 .header-container {

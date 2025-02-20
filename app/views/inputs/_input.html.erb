@@ -1,17 +1,29 @@
 <div id="<%= dom_id input %>">
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+
   <p>
-    <strong>Data:</strong>
+    <strong>Data :</strong>
     <%= input.data %>
   </p>
 
   <p>
-    <strong>Kind:</strong>
+    <strong>Type :</strong>
     <%= input.kind %>
   </p>
 
   <p>
-    <strong>User:</strong>
+    <strong>Utilisateur :</strong>
     <%= link_to input.user %>
   </p>
+
+  <p>
+  <strong>Crée le :</strong>
+  <%= input.created_at %>
+</p>
+
+</div>
+</div>
 
 </div>

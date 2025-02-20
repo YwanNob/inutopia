@@ -4,13 +4,20 @@
 
 <h1>Inputs</h1>
 
-<div id="inputs">
-  <% @inputs.each do |input| %>
-    <%= render input %>
-    <p>
-      <%= link_to "Show this input", input %>
-    </p>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+    <% @inputs.each do |input| %>
+      <%= render input %>
+      <p class="mt-3">
+        <%= link_to "Show this input", input %>
+      </p>
+    <% end %>
+
+    </div>
+  </div>
 </div>
+
 
 <%= link_to "New input", new_input_path %>
