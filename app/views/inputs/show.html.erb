@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @input %>
+
+<div>
+  <%= link_to "Edit this input", edit_input_path(@input) %> |
+  <%= link_to "Back to inputs", inputs_path %>
+
+  <%= button_to "Destroy this input", @input, method: :delete %>
+</div>

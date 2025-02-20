@@ -10,9 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_20_115541) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_20_134207) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "inputs", force: :cascade do |t|
+    t.string "data"
+    t.bigint "kind_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kind_id"], name: "index_inputs_on_kind_id"
+    t.index ["user_id"], name: "index_inputs_on_user_id"
+  end
+
+  create_table "kinds", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "pseudonym"
@@ -20,4 +36,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_20_115541) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_foreign_key "inputs", "kinds"
+  add_foreign_key "inputs", "users"
 end

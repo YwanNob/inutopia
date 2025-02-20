@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Inputs" %>
+
+<h1>Inputs</h1>
+
+<div id="inputs">
+  <% @inputs.each do |input| %>
+    <%= render input %>
+    <p>
+      <%= link_to "Show this input", input %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New input", new_input_path %>

@@ -1,0 +1,38 @@
+// Sassy
+@import "bootstrap";
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Bricolage Grotesque";
+
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 20px;
+
+}
+
+.link-header a {
+  color: rgb(255, 255, 255);
+}
+.link-header a:hover {
+  color: rgba(255, 255, 255, 0.571);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}

@@ -13,6 +13,15 @@
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
     <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
+        <!-- Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+
+    <!-- Lemon Milk -->
+    <link href="https://fonts.cdnfonts.com/css/lemon-milk" rel="stylesheet">
+
+
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
@@ -22,7 +31,30 @@
     <%= javascript_importmap_tags %>
   </head>
 
+  <header>
+
+  <div class="header-container">
+
+    <div class="link-header">
+      <h2>
+        <%= link_to "INPUTOPIA", inputs_path %>
+      </h2>
+    </div>
+
+    <div class="link-header">
+      <h3>
+        <%= link_to "Créer un Input", new_input_path %>
+      </h3>
+    </div>
+
+  </div>
+
+
+  </header>
+
   <body>
-    <%= yield %>
+  <main class="container">
+  <%= yield %>
+  </main>
   </body>
 </html>
