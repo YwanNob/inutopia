@@ -8,10 +8,7 @@
     <%= f.association :kind, include_blank: false %>
     <%= link_to "Ajouter un type d'input", new_kind_path %>
 
-    <%= f.association :user, collection: [current_user], include_blank: false %>
-    <%= link_to "Créer son profil", new_user_path %>
-
-
+    <%= f.association :user, collection: [current_user], include_blank: false%>
   </div>
 
   <div class="form-actions btn btn-light mt-3 p-0">

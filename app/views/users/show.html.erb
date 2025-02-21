@@ -4,20 +4,31 @@
 
 
 <h2>Inputs créées</h2>
+<div class="mt-4">
+<li>
 <% @user.inputs.each do |input| %>
   <%= link_to input %><br>
 <% end %>
-
-
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
+</li>
 </div>
 
 
+<div class="mt-3">
 <div>
+<%= link_to "Edit this user", edit_user_path(@user) %> |
+</div>
+
+<div class="mt-3">
+<%= link_to "Back to users", users_path %>
+</div>
+<div class="mt-3">
+
+  <%= button_to "Destroy this user", @user, method: :delete %>
+</div>
+</div>
+
+
+<div class="mt-3">
   <%= link_to "Créer un Input", new_input_path %>
 
 </div>
