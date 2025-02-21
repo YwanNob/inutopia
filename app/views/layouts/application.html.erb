@@ -54,11 +54,11 @@
   <% end %>
 
     </div>
-    <div>
+    <div class='btn btn-danger'>
     <%= button_to(
         "Déconnexion",
         destroy_user_session_path,
-        method: :delete
+        method: :delete, class:'back'
       ) %>
     </div>
   </div>
