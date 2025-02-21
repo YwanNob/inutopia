@@ -3,8 +3,13 @@
 <%= render @input %>
 
 <div>
-  <%= link_to "Modifier cette input", edit_input_path(@input) %> |
+  <% if user_signed_in? && current_user == @input.user %>
+    <%= link_to "Modifier cette input", edit_input_path(@input) %> |
+  <% end %>
+
   <%= link_to "Retour", inputs_path %>
 
-  <%= button_to "Supprimer", @input, method: :delete %>
+  <% if user_signed_in? && current_user == @input.user %>
+    <%= button_to "Supprimer", @input, method: :delete, data: { confirm: "Es-tu sûr ?" } %>
+  <% end %>
 </div>
