@@ -66,4 +66,6 @@ gem "simple_form", "~> 5.3"
 gem "dartsass-rails"
 gem "bootstrap", "~> 5.3.3"
 
+gem 'rails-i18n'
 gem 'devise', '~> 4.9.2'
+gem 'devise-i18n'
