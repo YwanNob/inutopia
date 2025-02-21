@@ -25,7 +25,7 @@ class InputsController < ApplicationController
 
     respond_to do |format|
       if @input.save
-        format.html { redirect_to @input, notice: "Input was successfully created." }
+        format.html { redirect_to @input, notice: "Input crée avec succès." }
         format.json { render :show, status: :created, location: @input }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class InputsController < ApplicationController
   def update
     respond_to do |format|
       if @input.update(input_params)
-        format.html { redirect_to @input, notice: "Input was successfully updated." }
+        format.html { redirect_to @input, notice: "Input modifié avec succès." }
         format.json { render :show, status: :ok, location: @input }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class InputsController < ApplicationController
     @input.destroy!
 
     respond_to do |format|
-      format.html { redirect_to inputs_path, status: :see_other, notice: "Input was successfully destroyed." }
+      format.html { redirect_to inputs_path, status: :see_other, notice: "Input supprimé avec succès." }
       format.json { head :no_content }
     end
   end

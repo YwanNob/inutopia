@@ -1,16 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Kinds" %>
+<% content_for :title, "Type" %>
 
-<h1>Kinds</h1>
+<h1>Type</h1>
 
 <div id="kinds">
   <% @kinds.each do |kind| %>
     <%= render kind %>
     <p>
-      <%= link_to "Show this kind", kind %>
+      <%= link_to "Voir ce type", kind %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New kind", new_kind_path %>
+<%= link_to "Nouveau type", new_kind_path %>

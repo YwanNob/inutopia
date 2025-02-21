@@ -3,8 +3,8 @@
 <%= render @input %>
 
 <div>
-  <%= link_to "Edit this input", edit_input_path(@input) %> |
-  <%= link_to "Back to inputs", inputs_path %>
+  <%= link_to "Modifier cette input", edit_input_path(@input) %> |
+  <%= link_to "Retour", inputs_path %>
 
-  <%= button_to "Destroy this input", @input, method: :delete %>
+  <%= button_to "Supprimer", @input, method: :delete %>
 </div>
