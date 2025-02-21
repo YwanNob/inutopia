@@ -34,7 +34,7 @@ header {
 
 }
 .link-header a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: rgba(255, 255, 255, 0.849);
 }
 
@@ -42,9 +42,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  gap: 30px;
 }
 
 .back {
-  background-color: none;
+  background-color: rgba(255, 0, 0, 0);
+  border: none;
+  color: white;
 }
