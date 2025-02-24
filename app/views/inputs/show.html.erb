@@ -8,8 +8,10 @@
   <% end %>
 
   <%= link_to "Retour", inputs_path %>
-
+  <br>
+  <div class="btn btn-danger mt-4" >
   <% if user_signed_in? && current_user == @input.user %>
-    <%= button_to "Supprimer", @input, method: :delete, data: { confirm: "Es-tu sûr ?" } %>
+    <%= button_to "Supprimer", @input, method: :delete, data: { confirm: "Es-tu sûr ?" }, class:'back' %>
   <% end %>
+  </div>
 </div>
